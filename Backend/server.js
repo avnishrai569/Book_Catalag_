@@ -16,8 +16,13 @@ mongoose.connect('mongodb://localhost:27017/bookcatalog')
 
 
 app.use(bodyParser.json());
-app.use(cors());
-
+app.use(cors(
+  {
+    origin :["http://deploy-mern-lwhq.vercel.app"],
+    methods: ["POST","GET"],
+    credentials: true
+  }
+));
 app.use('/api/books', bookRoutes);
 app.use('/api/favorites', favoriteRoutes);
 
