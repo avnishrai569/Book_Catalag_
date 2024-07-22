@@ -1,0 +1,17 @@
+{
+    "version": 2,
+    "name": "book-catalog-app",
+    "builds": [
+      {
+        "src": "*.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/"
+      }
+    ]
+  }
+  
